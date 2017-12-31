@@ -1,3 +1,3 @@
 # Boostrap-Javascript-Calculator 
     
-    simple calculator which is build on Bootstrap and Javascript 
+    Basic calculator which is build on Bootstrap and Javascript 
