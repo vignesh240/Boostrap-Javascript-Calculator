@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+
+    function displayNumbers(iNum) {
+      buttonsForm.totalInput.value += iNum;
+    }
+
+    function clearForm()  {
+      buttonsForm.totalInput.value = buttonsForm.totalInput.value.slice(0,0);
+    }
+
+    function BackSpace() {
+      buttonsForm.totalInput.value = buttonsForm.totalInput.value.slice(0,length-1);
+    }
+
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="panel">
+      <div class="row">
+        <div class="col-sm-8">
+        <div class=col-sm-offset-5>
+          <div class="panel panel-primary">
+            <div class="panel-heading" style="text-align:center">
+              My Bootstrap Calculator
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                  <form name="buttonsForm">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="totalInput" />
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-primary btn-md btn-block" value="1" name="one" onclick="displayNumbers(one.value)">1</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-primary btn-md btn-block" value="2" name="two" onclick="displayNumbers(two.value)">2</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-primary btn-md btn-block" value="3" name="three" onclick="displayNumbers(three.value)">3</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-primary btn-md btn-block" value="+" name="plus" onclick="displayNumbers(plus.value)">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-primary btn-md btn-block" value=4 name="four" onclick="displayNumbers(four.value)">4</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-primary btn-md btn-block" value=5 name="five" onclick="displayNumbers(five.value)">5</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-primary btn-md btn-block" value=6 name="six" onclick="displayNumbers(six.value)">6</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-primary btn-md btn-block" value=- name="minus" onclick="displayNumbers(minus.value)">-</button>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-primary btn-md btn-block" value=7 name="sven" onclick="displayNumbers(sven.value)">7</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-primary btn-md btn-block" value=8 name="eight" onclick="displayNumbers(eight.value)">8</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-primary btn-md btn-block" value=9 name="nine" onclick="displayNumbers(nine.value)">9</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-primary btn-md btn-block" value=* name="multiplication" onclick="displayNumbers(multiplication.value)">*</button>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-primary btn-md btn-block" value=0 name="zero" onclick="displayNumbers(zero.value)">0</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-primary btn-md btn-block" value=. name="dot" onclick="displayNumbers(dot.value)">.</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-primary btn-md btn-block" value== name="equals" onclick="totalInput.value=eval(totalInput.value)">=</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-primary btn-md btn-block" value=/ name="division" onclick="displayNumbers(division.value)">/</button>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="col-sm-6">
+                          <button type="button" class="btn btn-danger btn-md btn-block" name="clear" onclick="clearForm()">Clear</button>
+                        </div>
+                        <div class="col-sm-6">
+                          <button type="button"
+                           class="btn btn-info btn-md btn-block" name="backSpace" onclick ="BackSpace()">BackSpace</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer" style="text-align:right">
+              Development By Vignesh Manoharan
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
